@@ -49,11 +49,11 @@ example:
 
 ```bash
 $ helm package .
-Successfully packaged chart and saved it to: /path/to/demo-helm-library/demo-library-0.1.1.tgz
+Successfully packaged chart and saved it to: /path/to/demo-helm-library/demo-library-0.1.2.tgz
 
 # Chart.yaml inside the package has been created with the version from the current Chart.yaml:
-$ tar -qxvf demo-library-0.1.1.tgz && cat demo-library/Chart.yaml | grep version
-version: 0.1.1
+$ tar -qxvf demo-library-0.1.2.tgz && cat demo-library/Chart.yaml | grep version
+version: 0.1.2
 ```
 
 Also, we can set the chart version manually. This may be useful if you will test some features locally.
@@ -76,13 +76,13 @@ version: 0.1.2
 ## Push chart to oci repo
 
 ```bash
-helm push demo-library-0.1.1.tgz oci://quay.io/$QUAY_USERNAME/test-helm
+helm push demo-library-0.1.2.tgz oci://quay.io/$QUAY_USERNAME/test-helm
 ```
 
 example:
 ```bash
-$ helm push demo-library-0.1.1.tgz oci://quay.io/$QUAY_USERNAME/test-helm
-Pushed: quay.io/$QUAY_USERNAME/test-helm/demo-library:0.1.1
+$ helm push demo-library-0.1.2.tgz oci://quay.io/$QUAY_USERNAME/test-helm
+Pushed: quay.io/$QUAY_USERNAME/test-helm/demo-library:0.1.2
 Digest: sha256:ae96270ed2cc592b52550a289dd82650ee6b39428a4befde721d58c20531aa5c
 ```
 
